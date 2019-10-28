@@ -114,8 +114,8 @@ mainContentPar[3].textContent = siteContent["main-content"]["product-content"];
 mainContentPar[4].textContent = siteContent["main-content"]["vision-content"];
 
 //styling for headers
-mainContentHead.forEach(function (a){
-  a.style.color = "darkolivegreen";
+mainContentHead.forEach(function (x){
+  x.style.color = "darkolivegreen";
 })
 
 //Main Content img
