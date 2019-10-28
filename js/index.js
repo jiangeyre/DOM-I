@@ -85,6 +85,9 @@ cta.innerHTML = "DOM<br>IS<br>AWESOME";
 let ctaLogo = document.querySelector('.cta img');
 //Assign logo to ctaLogo object's img src value
 ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
+ctaLogo.style.border = "2px darkolivegreen solid";
+ctaLogo.style.borderRadius = "12rem";
+ctaLogo.style.boxShadow = "3px 3px 3px olive";
 
 //Assign CTA section button using a query selector
 let ctaButt = document.querySelector('.cta button');
@@ -125,6 +128,7 @@ let mainContentImg = document.getElementById('middle-img');
 mainContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 mainContentImg.style.borderRadius = "2rem";
 mainContentImg.style.border = "2px darkolivegreen solid";
+mainContentImg.style.boxShadow = "3px 3px 3px olive";
 
 /* Contact Section */
 
@@ -134,6 +138,8 @@ contactHeader.style.color = "darkolivegreen";
 
 let contactPar = document.querySelectorAll('.contact p');
 contactPar[0].textContent = siteContent['contact']['address'];
+//adding a break
+contactPar[0].innerHTML = "123 Way 456 Street<br>Somewhere, USA";
 contactPar[1].textContent = siteContent['contact']['phone'];
 contactPar[2].textContent = siteContent['contact']['email'];
 
@@ -142,4 +148,5 @@ contactPar[2].textContent = siteContent['contact']['email'];
 //Assign the copyright to the footer using a query selector
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
+footer.style.color = "darkolivegreen";
 
