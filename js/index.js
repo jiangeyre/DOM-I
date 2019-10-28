@@ -40,3 +40,16 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//HTML collection from element of nav
+let nav = document.querySelectorAll('nav');
+console.log(nav.children);
+
+let navChildCount = nav[0].childElementCount;
+
+/* CTA Section */
+
+//Assign h1 to cta using a query selector
+let cta = document.querySelector('.cta h1');
+//Assign text content to cta object's h1 value
+cta.textContent = siteContent['cta']['h1'];
