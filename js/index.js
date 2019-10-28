@@ -41,6 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Styling for borders
+let border = document.querySelector(".main-content");
+border.style.borderColor = "darkolivegreen";
+border.style.borderStyle = "solid";
+
 //HTML collection from element of nav
 let navItems = document.querySelectorAll('nav a');
 navItems[0].textContent = siteContent["nav"]["nav-item-1"];
@@ -50,12 +55,31 @@ navItems[3].textContent = siteContent["nav"]["nav-item-4"];
 navItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
+//Appending and prepending
+let nav = document.querySelector('nav');
+
+let appendLink = document.createElement('a');
+appendLink.textContent = "TEA";
+nav.appendChild(appendLink);
+
+let prependLink = document.createElement('a');
+prependLink.textContent = "BOOKS";
+nav.prepend(prependLink);
+
+let navItems2 = document.querySelectorAll('a');
+
+navItems2.forEach(function (a){
+  a.style.color = "darkolivegreen";
+  a.style.fontWeight = "bold";
+})
+
 /* CTA Section */
 
 //Assign h1 to cta using a query selector
 let cta = document.querySelector('.cta h1');
 //Assign text content to cta object's h1 value
-cta.textContent = siteContent['cta']['h1'];
+// cta.textContent = siteContent['cta']['h1'];
+cta.innerHTML = "DOM<br>IS<br>AWESOME";
 
 //Assign the logo to ctaLogo using a query selector
 let ctaLogo = document.querySelector('.cta img');
@@ -65,6 +89,11 @@ ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
 //Assign CTA section button using a query selector
 let ctaButt = document.querySelector('.cta button');
 ctaButt.textContent = siteContent['cta']['button'];
+ctaButt.style.borderRadius = "1.5rem";
+ctaButt.style.border = "2px darkolivegreen solid";
+ctaButt.style.color = "olivedrab";
+ctaButt.style.boxShadow = "3px 3px 3px olive";
+
 
 /* Main Content */
 
@@ -98,11 +127,14 @@ for(let i = 0; i < mainContentKey.length; i++){
 //Assign main content img through the element ID
 let mainContentImg = document.getElementById('middle-img');
 mainContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+mainContentImg.style.borderRadius = "2rem";
+mainContentImg.style.border = "2px darkolivegreen solid";
 
 /* Contact Section */
 
 let contactHeader = document.querySelector('.contact h4');
 contactHeader.textContent = siteContent['contact']['contact-h4'];
+contactHeader.style.color = "darkolivegreen";
 
 let contactPar = document.querySelectorAll('.contact p');
 contactPar[0].textContent = siteContent['contact']['address'];
