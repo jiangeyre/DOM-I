@@ -53,3 +53,40 @@ let navChildCount = nav[0].childElementCount;
 let cta = document.querySelector('.cta h1');
 //Assign text content to cta object's h1 value
 cta.textContent = siteContent['cta']['h1'];
+
+//Assign the logo to ctaLogo using a query selector
+let ctaLogo = document.querySelector('.cta img');
+//Assign logo to ctaLogo object's img src value
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//Assign CTA section button using a query selector
+let ctaButt = document.querySelector('.cta button');
+ctaButt.textcontent = siteContent['cta']['button'];
+
+/* Main Content */
+
+//Assign main content h4, p to arrays using a query selector
+let mainContentHead = document.querySelectorAll('.main-content h4');
+let mainContentPar = document.querySelectorAll('.main-content p');
+
+//Create arrays of key value pairs from JSON .main-content obj
+let mainContentKey = Object.keys(siteContent['main-content']);
+let mainContentValue = Object.values(siteContent['main-content']);
+
+//Header counter
+let h = 0;
+
+//Paragraph counter
+let p = 0;
+
+//Looping through an array of content's keys
+for(let i = 0; i < mainContentKey.length; i++){
+  //Check if keys contain string of h4 and assign textContent from content
+  if(mainContentKey[i].indexOf('h4') > -1){
+    mainContentHead[h++].textContent = mainContentValue[i];
+  //Check if keys contain string of content and assign textContent from content
+  }else if(mainContentKey[i].indexOf('content') > -1){
+    mainContentPar[p++].textContent = mainContentValue[i];
+  }
+}
+
