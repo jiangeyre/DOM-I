@@ -42,10 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //HTML collection from element of nav
-let nav = document.querySelectorAll('nav');
-console.log(nav.children);
-
-let navChildCount = nav[0].childElementCount;
+let navItems = document.querySelectorAll('nav a');
+navItems[0].textContent = siteContent["nav"]["nav-item-1"];
+navItems[1].textContent = siteContent["nav"]["nav-item-2"];
+navItems[2].textContent = siteContent["nav"]["nav-item-3"];
+navItems[3].textContent = siteContent["nav"]["nav-item-4"];
+navItems[4].textContent = siteContent["nav"]["nav-item-5"];
+navItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 /* CTA Section */
 
@@ -61,7 +64,7 @@ ctaLogo.setAttribute('src', siteContent["cta"]["img-src"]);
 
 //Assign CTA section button using a query selector
 let ctaButt = document.querySelector('.cta button');
-ctaButt.textcontent = siteContent['cta']['button'];
+ctaButt.textContent = siteContent['cta']['button'];
 
 /* Main Content */
 
@@ -89,4 +92,26 @@ for(let i = 0; i < mainContentKey.length; i++){
     mainContentPar[p++].textContent = mainContentValue[i];
   }
 }
+
+//Main Content img
+
+//Assign main content img through the element ID
+let mainContentImg = document.getElementById('middle-img');
+mainContentImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+/* Contact Section */
+
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+
+let contactPar = document.querySelectorAll('.contact p');
+contactPar[0].textContent = siteContent['contact']['address'];
+contactPar[1].textContent = siteContent['contact']['phone'];
+contactPar[2].textContent = siteContent['contact']['email'];
+
+/* Footer Section */
+
+//Assign the copyright to the footer using a query selector
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
 
