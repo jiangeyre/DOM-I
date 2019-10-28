@@ -97,30 +97,26 @@ ctaButt.style.boxShadow = "3px 3px 3px olive";
 
 /* Main Content */
 
-//Assign main content h4, p to arrays using a query selector
+//Assign main content h4 to arrays using a query selector
 let mainContentHead = document.querySelectorAll('.main-content h4');
+mainContentHead[0].textContent = siteContent["main-content"]["features-h4"];
+mainContentHead[1].textContent = siteContent["main-content"]["about-h4"];
+mainContentHead[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentHead[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentHead[4].textContent = siteContent["main-content"]["vision-h4"];
+
+//Assign main content p to arrays using a query selector
 let mainContentPar = document.querySelectorAll('.main-content p');
+mainContentPar[0].textContent = siteContent["main-content"]["features-content"];
+mainContentPar[1].textContent = siteContent["main-content"]["about-content"];
+mainContentPar[2].textContent = siteContent["main-content"]["services-content"];
+mainContentPar[3].textContent = siteContent["main-content"]["product-content"];
+mainContentPar[4].textContent = siteContent["main-content"]["vision-content"];
 
-//Create arrays of key value pairs from JSON .main-content obj
-let mainContentKey = Object.keys(siteContent['main-content']);
-let mainContentValue = Object.values(siteContent['main-content']);
-
-//Header counter
-let h = 0;
-
-//Paragraph counter
-let p = 0;
-
-//Looping through an array of content's keys
-for(let i = 0; i < mainContentKey.length; i++){
-  //Check if keys contain string of h4 and assign textContent from content
-  if(mainContentKey[i].indexOf('h4') > -1){
-    mainContentHead[h++].textContent = mainContentValue[i];
-  //Check if keys contain string of content and assign textContent from content
-  }else if(mainContentKey[i].indexOf('content') > -1){
-    mainContentPar[p++].textContent = mainContentValue[i];
-  }
-}
+//styling for headers
+mainContentHead.forEach(function (a){
+  a.style.color = "darkolivegreen";
+})
 
 //Main Content img
 
