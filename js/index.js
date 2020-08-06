@@ -48,6 +48,8 @@ border.style.borderStyle = "solid";
 
 //HTML collection from element of nav
 let navItems = document.querySelectorAll('nav a');
+
+// can use forEach for this
 navItems[0].textContent = siteContent["nav"]["nav-item-1"];
 navItems[1].textContent = siteContent["nav"]["nav-item-2"];
 navItems[2].textContent = siteContent["nav"]["nav-item-3"];
