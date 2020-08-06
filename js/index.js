@@ -48,6 +48,8 @@ border.style.borderStyle = "solid";
 
 //HTML collection from element of nav
 let navItems = document.querySelectorAll('nav a');
+
+// can use forEach for this
 navItems[0].textContent = siteContent["nav"]["nav-item-1"];
 navItems[1].textContent = siteContent["nav"]["nav-item-2"];
 navItems[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -80,6 +82,11 @@ let cta = document.querySelector('.cta h1');
 //Assign text content to cta object's h1 value
 // cta.textContent = siteContent['cta']['h1'];
 cta.innerHTML = "DOM<br>IS<br>AWESOME";
+
+/*
+const headh1 = document.querySelector('.cta-text h1').innerHTML = "DOM<br>IS<br>AWESOME";
+*/
+
 
 //Assign the logo to ctaLogo using a query selector
 let ctaLogo = document.querySelector('.cta img');
