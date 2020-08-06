@@ -83,6 +83,11 @@ let cta = document.querySelector('.cta h1');
 // cta.textContent = siteContent['cta']['h1'];
 cta.innerHTML = "DOM<br>IS<br>AWESOME";
 
+/*
+const headh1 = document.querySelector('.cta-text h1').innerHTML = "DOM<br>IS<br>AWESOME";
+*/
+
+
 //Assign the logo to ctaLogo using a query selector
 let ctaLogo = document.querySelector('.cta img');
 //Assign logo to ctaLogo object's img src value
